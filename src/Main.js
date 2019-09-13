@@ -5,19 +5,20 @@ import '@firebase/auth';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
+
 import reducers from './reducers';
 import LoginForm from './components/LoginForm';
 
 class Main extends Component {
     componentWillMount () {
         firebase.initializeApp({
-            apiKey: 'AIzaSyBXfB17IUAnlAqI_oPqwEfxh-4G3WT7w4E',
-            authDomain: 'ogrencikayit-9492e.firebaseapp.com',
-            databaseURL: 'https://ogrencikayit-9492e.firebaseio.com',
-            projectId: 'ogrencikayit-9492e',
-            storageBucket: 'ogrencikayit-9492e.appspot.com',
-            messagingSenderId: '743052728196',
-            appId: '1:743052728196:web:7ec5b0e2340d39c74d2fd1'
+            apiKey: 'AIzaSyBwRz2F9b9VtZwrjqiPFqucU56BDcsBeug',
+            authDomain: 'studentregister-4c24c.firebaseapp.com',
+            databaseURL: 'https://studentregister-4c24c.firebaseio.com',
+            projectId: 'studentregister-4c24c',
+            storageBucket: '',
+            messagingSenderId: '725485334021',
+            appId: '1:725485334021:web:5ec921b3fb042c0beff66c'
         });
     }
     render () {
