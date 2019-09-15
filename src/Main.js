@@ -7,10 +7,10 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 
 import reducers from './reducers';
-import LoginForm from './components/LoginForm';
+import Router from './Router';
 
 class Main extends Component {
-    componentWillMount () {
+    componentDidMount () {
         firebase.initializeApp({
             apiKey: 'AIzaSyBwRz2F9b9VtZwrjqiPFqucU56BDcsBeug',
             authDomain: 'studentregister-4c24c.firebaseapp.com',
@@ -25,9 +25,7 @@ class Main extends Component {
         const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
         return(
             <Provider store={store}>
-            <View>
-                <LoginForm />
-            </View>
+                <Router />
             </Provider>
         );
     };

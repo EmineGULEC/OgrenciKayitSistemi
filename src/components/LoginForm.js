@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { TextInput, Alert } from 'react-native';
+import { TextInput, Alert, View } from 'react-native';
 import firebase from '@firebase/app';
 import '@firebase/auth';
 import { connect } from 'react-redux';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
-import { Button, Card, CardSection, Spinner} from '../ortak';
+import { Button, Card, CardSection, Spinner } from '../ortak';
 
 class LoginForm extends Component {
   state ={ email: '', password: '', loading: false };
@@ -44,6 +44,7 @@ class LoginForm extends Component {
 
     const { inputStyle } = styles;
     return (
+      <View style={{ flex:1, backgroundColor: 'white' }}>
       <Card>
         <CardSection>
           <TextInput
@@ -68,6 +69,7 @@ class LoginForm extends Component {
           {this.renderButton()}
         </CardSection>
       </Card>
+      </View>
     );
   }
 };
@@ -87,8 +89,8 @@ inputStyle: {
 const mapStateToProps = ({ kimlikdogrulamaResponse }) => {
   const { email, password, loading } = kimlikdogrulamaResponse;
   return{
-    email,
-    password,
+    email: 'test@gmail.com',
+    password: '123456',
     loading
   };
 };

@@ -1,9 +1,10 @@
-import { EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_USER, LOGIN_USER_SUCCESS, LOGIN_USER_FAIL } from "../actions/types";
+import { EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_USER, LOGIN_USER_SUCCESS, LOGIN_USER_FAIL,STUDENT_CHANGED } from "../actions/types";
 
 const INITIAL_STATE = {
     email: '',
     password: '',
-    loading: false
+    loading: false,
+
 };
 
 export default (state = INITIAL_STATE, action) => {
